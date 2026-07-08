@@ -3,3 +3,6 @@ html {
     width: 100%;
   }
   
+body {
+    font-family: 'Poppins', sans-serif;
+}
