@@ -11,6 +11,20 @@
 </head>
 <body>
 <div id="espacio-navbar"></div>
+
+<div class="container-fluid">
+    <div class="row">
+       <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch("barra.html") 
+            .then(response => response.text())
+            .then(codigoHtml => {
+                document.getElementById("espacio-navbar").innerHTML = codigoHtml;
+            })
+            .catch(error => console.error("No se pudo cargar el menú:", error));
+    });
+</script>
+
     <div class="container m-5">
         <div class="container text-center">
             <div class="row align-items-center">
@@ -57,28 +71,7 @@ integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbIT
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Los Javadaba Miedo</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">Acerca de nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contacto</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  
   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
@@ -101,37 +94,26 @@ integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbIT
   </head>
 
   <body class="bg-light">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Los Javadaba Miedo</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html"
-                >Inicio</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">Acerca de nosotros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contacto</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <div id="contenedor-footer"></div>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        
+        fetch("navbar.html") 
+            .then(response => response.text())
+            .then(codigoHtml => {
+                document.getElementById("espacio-footer").innerHTML = codigoHtml;
+            })
+            .catch(error => console.error("Error al cargar el menú:", error));
+
+        fetch("footer.html") 
+            .then(response => response.text())
+            .then(codigoHtml => {
+                document.getElementById("contenedor-footer").innerHTML = codigoHtml;
+            })
+            .catch(error => console.error("Error al cargar el footer:", error));
+
+    });
+</script>
     <script src="script.js"></script>
     <script
       src="https://replit.com/public/js/replit-badge-v2.js"
