@@ -1,5 +1,26 @@
+:root{
+  --vino: #4A0B22;
+}
+
+/* Ekemplo de como usar las variales
+  background-color: var(--tea-green); 
+*/
+
+
 html {
     height: 100%;
     width: 100%;
   }
   
+  .color-titulo{
+    color: var(--vino);
+
+  }
+
+body {
+    background-color: #F7F7F7;
+  }
+body {
+  body {
+    font-family: 'Poppins', sans-serif;
+}
